@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pmvvm/pmvvm.dart';
 
 import 'sample_page.vm.dart';
@@ -28,7 +29,7 @@ class _SamplePageView extends StatelessView<CounterPageVM> {
           children: <Widget>[
             Text(
               page.counter.toString(),
-              style: Theme.of(context).textTheme.headline4,
+              style: TextStyle(fontSize: 48.sp),
             ),
           ],
         ),
