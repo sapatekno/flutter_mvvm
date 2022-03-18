@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:sapatekno_mvvm/configs/easy_localization_config.dart';
-import 'package:sapatekno_mvvm/configs/flavor_banner_config.dart';
-import 'package:sapatekno_mvvm/configs/variable_config.dart';
 
-import 'configs/device_preview_config.dart';
-import 'configs/material_app_config.dart';
-import 'configs/screen_util_init_config.dart';
-import 'pages/sample/sample_page.view.dart';
+import 'config/device_preview_config.dart';
+import 'config/easy_localization_config.dart';
+import 'config/flavor_banner_config.dart';
+import 'config/material_app_config.dart';
+import 'config/screen_util_init_config.dart';
+import 'config/variable_config.dart';
+import 'page/sample/sample_page.view.dart';
 
 void main() async {
   FlavorConfig(
