@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pmvvm/pmvvm.dart';
@@ -22,7 +23,9 @@ class _SamplePageView extends StatelessView<CounterPageVM> {
   @override
   Widget render(context, page) {
     return Scaffold(
-      appBar: AppBar(title: Text(page.title)),
+      appBar: AppBar(
+        title: const Text('counter').tr(),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +39,7 @@ class _SamplePageView extends StatelessView<CounterPageVM> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: page.increase,
-        tooltip: 'Increment',
+        tooltip: 'increment'.tr(),
         child: const Icon(Icons.add),
       ),
     );
