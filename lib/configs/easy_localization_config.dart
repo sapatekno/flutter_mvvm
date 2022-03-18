@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 
 EasyLocalization easyLocalizationConfig({required Widget child}) {
   return EasyLocalization(
-    supportedLocales: const [Locale('en', 'US'), Locale('id', 'ID')],
+    supportedLocales: const [
+      Locale('en', 'US'),
+      Locale('id', 'ID'),
+    ],
     path: 'assets/translations',
     fallbackLocale: const Locale('en', 'US'),
     child: child,

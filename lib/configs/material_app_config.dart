@@ -13,6 +13,7 @@ class MaterialAppConfig extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       useInheritedMediaQuery: true,
+      debugShowCheckedModeBanner: false,
       builder: (context, widget) {
         ScreenUtil.setContext(context);
         return MediaQuery(

@@ -1,4 +1,5 @@
 {
   "counter": "counter",
-  "increment": "increment"
+  "increment": "increment",
+  "development": "development"
 }
