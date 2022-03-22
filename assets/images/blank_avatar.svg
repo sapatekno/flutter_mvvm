@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg enable-background="new 312.809 0 401 401" height="401px" id="svg10" version="1.1"
+    viewBox="312.809 0 401 401" width="401px" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs14" />
+    <g id="g8" transform="matrix(1.223 0 0 1.223 -467.5 -843.44)">
+        <rect fill="#E4E6E7" height="401" id="rect2" width="401" x="601.45" y="653.07" />
+        <path style="opacity:1;stroke-width:0.607811"
+            d="m 801.96063,862.26201 c -51.36914,0 -93.31114,29.28735 -95.65728,66.0204 h 191.33279 c -2.35224,-36.73609 -44.30942,-66.0204 -95.67551,-66.0204 z"
+            fill="#aeb4b7" id="path4" />
+        <path style="opacity:1;stroke-width:0.607811"
+            d="m 849.62819,798.33042 c 0,28.41274 -21.3378,51.44574 -47.65843,51.44574 -26.32065,0 -47.65845,-23.033 -47.65845,-51.44574 0,-28.41272 21.3378,-51.44571 47.65845,-51.44571 26.32427,0 47.65843,23.03604 47.65843,51.44513 z"
+            fill="#aeb4b7" id="path6" />
+    </g>
+</svg>

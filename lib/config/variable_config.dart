@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 
 enum BuildMode { development, production }
+enum AlertType { normal, error }
 
 class VariableConfig {
   static String developmentName = 'development'.tr();
