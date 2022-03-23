@@ -5,6 +5,7 @@ import 'package:pmvvm/pmvvm.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:sapatekno_mvvm/data/model/user_model.dart';
 import 'package:sapatekno_mvvm/shimmer/avatar_shimmer.dart';
+import 'package:sapatekno_mvvm/widget/app_bar_widget.dart';
 import 'package:sapatekno_mvvm/widget/avatar_widget.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
@@ -28,9 +29,7 @@ class _SamplePageView extends StatelessView<CounterPageVM> {
   @override
   Widget render(context, page) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('counter').tr(),
-      ),
+      appBar: appBarWidget(context: context),
       body: page.isLoading
           ? Padding(
               padding: const EdgeInsets.all(8.0),
