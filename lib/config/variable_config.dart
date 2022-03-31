@@ -7,6 +7,8 @@ class VariableConfig {
   static String developmentName = 'development'.tr();
   static String releaseName = 'release'.tr();
 
+  static String initialRoute() => '/';
+
   static const developmentVariables = {
     'buildMode': BuildMode.development,
     'appName': 'Counter Development',

@@ -1,7 +1,8 @@
 import 'package:dio_log/dio_log.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sapatekno_mvvm/page/telker_screen/talker_screen_page.dart';
+import 'package:sapatekno_mvvm/page/setting/setting_page.view.dart';
+import 'package:sapatekno_mvvm/page/talker_screen/talker_screen_page.dart';
 import 'package:sapatekno_mvvm/util/app_util.dart';
 
 AppBar appBarWidget({required BuildContext context}) {
@@ -24,7 +25,7 @@ AppBar appBarWidget({required BuildContext context}) {
             TextButton.icon(
               onPressed: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TalkerScreenPage()));
+                Navigator.of(context).pushNamed(TalkerScreenPage.routeName);
               },
               icon: const Icon(Icons.display_settings),
               label: const Text('Console Log'),
@@ -51,9 +52,9 @@ AppBar appBarWidget({required BuildContext context}) {
       : Container();
 
   return AppBar(
-    title: const Text('aha'),
+    title: const Text('User List'),
     actions: [
-      IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+      IconButton(onPressed: () => Navigator.of(context).pushNamed(SettingPage.routeName), icon: const Icon(Icons.settings)),
       devWidget,
     ],
   );

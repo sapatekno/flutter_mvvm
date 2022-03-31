@@ -2,12 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:dio_log/dio_log.dart';
 import 'package:talker/talker.dart';
 
-class ReqresClient {
+class ReqresNetClient {
   Dio init() {
     Dio _dio = Dio();
     _dio.options.baseUrl = "https://reqres.in/api";
-    _dio.interceptors.add(DioLogInterceptor());
     _dio.interceptors.add(ApiInterceptors());
+    _dio.interceptors.add(DioLogInterceptor());
     return _dio;
   }
 }

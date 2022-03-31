@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pmvvm/pmvvm.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:sapatekno_mvvm/data/model/user_model.dart';
+import 'package:sapatekno_mvvm/data/net/model/user_net_model.dart';
 import 'package:sapatekno_mvvm/shimmer/avatar_shimmer.dart';
 import 'package:sapatekno_mvvm/widget/app_bar_widget.dart';
 import 'package:sapatekno_mvvm/widget/avatar_widget.dart';
@@ -12,6 +12,8 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 import 'sample_page.vm.dart';
 
 class SamplePage extends StatelessWidget {
+  static const routeName = '/';
+
   const SamplePage({Key? key}) : super(key: key);
 
   @override
@@ -38,7 +40,7 @@ class _SamplePageView extends StatelessView<CounterPageVM> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListTile(
-                      leading: avatarShimmer(size: 24.w),
+                      leading: avatarShimmer(size: 36.w),
                       title: Padding(
                         padding: const EdgeInsets.only(bottom: 8),
                         child: Shimmer(
@@ -72,7 +74,7 @@ class _SamplePageView extends StatelessView<CounterPageVM> {
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                 itemCount: page.listUser?.length ?? 0,
                 itemBuilder: (context, index) {
-                  UserModel data = page.listUser![index];
+                  UserNetModel data = page.listUser![index];
                   return Card(
                     child: InkWell(
                       onTap: () {},

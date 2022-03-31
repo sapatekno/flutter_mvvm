@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:sapatekno_mvvm/base/view_model_base.dart';
 import 'package:sapatekno_mvvm/config/variable_config.dart';
-import 'package:sapatekno_mvvm/data/model/page_model.dart';
-import 'package:sapatekno_mvvm/data/model/user_model.dart';
-import 'package:sapatekno_mvvm/data/network/repository/user_repository.dart';
+import 'package:sapatekno_mvvm/data/net/model/page_net_model.dart';
+import 'package:sapatekno_mvvm/data/net/model/user_net_model.dart';
+import 'package:sapatekno_mvvm/data/net/repo/user_net_repo.dart';
 
 enum LoadType { init, refresh, loadMore }
 
 class CounterPageVM extends ViewModelBase {
-  final UserRepository _userRepository = UserRepository();
+  final UserNetRepo _userRepository = UserNetRepo();
   final RefreshController refreshController = RefreshController(initialRefresh: false);
 
   int page = 1;
   int totalPages = 1;
-  List<UserModel>? listUser = [];
+  List<UserNetModel>? listUser = [];
 
   @override
   void init() {
@@ -32,7 +32,7 @@ class CounterPageVM extends ViewModelBase {
 
   void fetchUsers({required LoadType loadType}) async {
     bool isFetchNeeded = true;
-    PageModel? response;
+    PageNetModel? response;
 
     switch (loadType) {
       case LoadType.init:
@@ -57,8 +57,7 @@ class CounterPageVM extends ViewModelBase {
 
     switch (loadType) {
       case LoadType.init:
-        var coba = await Future.delayed(Duration(seconds: 3)).then((value) => showloading(false));
-
+        showloading(false);
         refreshController.resetNoData();
         break;
       case LoadType.refresh:

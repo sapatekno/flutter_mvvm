@@ -1,11 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:sapatekno_mvvm/page/sample/sample_page.view.dart';
 
 import 'config/device_preview_config.dart';
 import 'config/easy_localization_config.dart';
-import 'config/material_app_config.dart';
+import 'config/material_app_config/material_app_config.view.dart';
 import 'config/screen_util_init_config.dart';
 import 'config/variable_config.dart';
 
@@ -25,7 +24,6 @@ void main() async {
       builder: (context) => screenUtilInitConfig(
         builder: () => easyLocalizationConfig(
           child: const MaterialAppConfig(
-            home: SamplePage(),
           ),
         ),
       ),

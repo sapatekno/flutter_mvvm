@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'user_model.g.dart';
+part 'user_net_model.g.dart';
 
 @JsonSerializable()
-class UserModel {
+class UserNetModel {
   int? id;
   String? email;
   @JsonKey(name: 'first_name')
@@ -12,7 +12,7 @@ class UserModel {
   String? lastName;
   String? avatar;
 
-  UserModel({
+  UserNetModel({
     this.id,
     this.email,
     this.firstName,
@@ -20,7 +20,7 @@ class UserModel {
     this.avatar,
   });
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
+  factory UserNetModel.fromJson(Map<String, dynamic> json) => _$UserNetModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$UserModelToJson(this);
+  Map<String, dynamic> toJson() => _$UserNetModelToJson(this);
 }
